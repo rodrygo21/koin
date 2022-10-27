@@ -1,0 +1,17 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+.btn-dark{
+    border-radius: 56px;
+    background-color: variables.$text-color;
+    
+    &:focus{
+        box-shadow: none;
+    }
+
+    &:hover{
+        color: variables.$text-color;
+        background-color: #fff;
+        @include mixins.transition-ease;
+    }
+}

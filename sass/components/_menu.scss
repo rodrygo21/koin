@@ -1,0 +1,44 @@
+@use "../abstract/variables";
+@use "../components/button";
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+
+    & i{
+        margin: 5px 30px 0 0;
+        border: 1px solid variables.$text-color;
+        border-radius: 28px;
+        width: 58px;
+        height: 56px;
+        padding-top: 20px;
+        padding-left: 20px;
+
+        &:hover{
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    & .btn-nav{
+        width: 177px;
+        height: 57px;
+    }
+
+    & .nav-item{
+        margin-left: 50px;
+
+        & .nav-link{
+            color: variables.$secondary-text-color;
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+    
+    }
+}

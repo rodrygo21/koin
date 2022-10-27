@@ -1,0 +1,123 @@
+@use "../abstract/variables";
+@use "../components/button";
+@use "../abstract/mixins";
+
+#product {
+    padding-bottom: 100px;
+
+    .btn-product {
+        width: 240px;
+        height: 56px;
+    }
+
+    .card {
+        background: variables.$bg-color;
+        height: 460px;
+        font-family: variables.$first-font;
+
+        & h3 {
+            width: 203px;
+            padding-left: 30px;
+        }
+
+        & p {
+            padding-left: 30px;
+            padding-top: 20px;
+        }
+
+        & a {
+            float: right;
+            padding-right: 70px;
+            color: variables.$text-color;
+        }
+
+    }
+}
+
+#resoults {
+    background: variables.$bg-color;
+    padding-top: 100px;
+    padding-bottom: 80px;
+
+    & h1 {
+        padding-bottom: 30px;
+    }
+
+}
+
+#support {
+    padding-top: 100px;
+
+    & h2 {
+        padding-bottom: 15px;
+        color: variables.$text-color;
+
+        @include mixins.breakpoint-down(770px){
+            &{
+                padding-top: 160px;
+            }
+        }
+    }
+
+    & p {
+        color: variables.$secondary-text-color;
+    }
+
+    & .list-group-item {
+        border: none;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+
+    & a {
+        color: variables.$secondary-text-color;
+    }
+
+    & .position {
+        padding-top: 150px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .img-1 {
+            position: absolute;
+        }
+
+        & .img-2 {
+            position: absolute;
+            z-index: 1;
+        }
+
+        & .img-3 {
+            z-index: 2;
+        }
+
+        @include mixins.breakpoint-down(560px) {
+            & .img-2 {
+                width: 70px;
+            }
+
+            & .img-3 {
+                width: 20px;
+            }
+        }
+    }
+
+    .builtfor {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        @include mixins.breakpoint-down(560px) {
+            & {
+                padding-top: 50px;
+            }
+        }
+
+        & h1 {
+            padding-bottom: 40px;
+            font-size: 40px;
+        }
+    }
+
+}

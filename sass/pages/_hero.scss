@@ -1,0 +1,94 @@
+@use "../abstract/variables";
+@use "../components/button";
+@use "../abstract/mixins";
+
+#header {
+    background: variables.$bg-color;
+    padding-top: 80px;
+
+    & h2 {
+        font-size: 60px;
+        line-height: 60px;
+        letter-spacing: 1px;
+    }
+
+    & p {
+        padding-top: 30px;
+        line-height: 31px;
+        font-weight: 400;
+        padding-bottom: 26px;
+    }
+
+    .btn-header {
+        width: 218px;
+        height: 56px;
+    }
+
+    & .content-img {
+        position: relative;
+    }
+
+    & .content-img::before {
+        content: " ";
+        background: url(../../images/Rectangle\ \(2\).png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 206px;
+        height: 200px;
+        position: absolute;
+        top: 40%;
+        right: 60%;
+
+        @include mixins.breakpoint-down(1000px) {
+            width: 180px;
+        }
+
+        @include mixins.breakpoint-down(560px) {
+            right: 50%;
+            width: 160px;
+            top: 50%;
+        }
+    }
+
+    & .content-img::after {
+        content: " ";
+        background: url(../../images/Rectangle\ \(1\).png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 220px;
+        height: 187px;
+        position: absolute;
+        top: 35%;
+        left: 65%;
+
+        @include mixins.breakpoint-down(1000px) {
+            width: 180px;
+            left: 55%;
+        }
+
+        @include mixins.breakpoint-down(560px) {
+            width: 160px;
+            top: 40%;
+        }
+    }
+
+    @include mixins.breakpoint-down(560px) {
+        & .hero-img {
+            width: 80%;
+            padding-bottom: 15px;
+        }
+
+        & h2 {
+            font-size: 40px;
+        }
+    }
+
+    & .hero-footer-images {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

@@ -1,0 +1,82 @@
+@use "../abstract/variables";
+@use "../components/button";
+@use "../abstract/mixins";
+
+#footer {
+    background: variables.$contact-bg-color;
+    padding: 80px 50px 20px 50px;
+
+    & a {
+        color: variables.$contact-nav-color;
+        padding-left: 15px;
+    }
+
+    & .btn-footer {
+        width: 218px;
+        height: 56px;
+    }
+
+    & .btn-footer-2 {
+        width: 160px;
+        height: 56px;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    & .list-group-item {
+        border: none;
+        background: transparent;
+        color: variables.$contact-text-color;
+        padding-bottom: 13px;
+    }
+
+    @include mixins.breakpoint-down(768px) {
+        & .col-md-3 {
+            padding-top: 20px;
+        }
+    }
+
+    & h4 {
+        font-size: 19px;
+        font-weight: 400;
+        color: #fff;
+        padding-top: 30px;
+        padding-left: 25px;
+    }
+
+    & input {
+        margin-left: 15px;
+        margin-top: 30px;
+        height: 56px;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    & p {
+        color: variables.$copyright-color;
+
+        @include mixins.breakpoint-down(760px) {
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    & .footer-copyright {
+        padding-top: 100px;
+
+        @include mixins.breakpoint-down(768px) {
+            padding-top: 40px;
+        }
+
+        & {
+            @include mixins.breakpoint-down(990px) {
+                & a {
+                    display: block;
+                }
+            }
+
+        }
+    }
+}

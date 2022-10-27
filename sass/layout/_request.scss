@@ -1,0 +1,26 @@
+@use "../abstract/variables";
+@use "../components/button";
+@use "../abstract/mixins";
+
+#request{
+    background: variables.$bg-color;
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    & h1{
+        padding-bottom: 20px;
+        font-family: variables.$second-font;
+        font-weight: 700;
+    }
+
+    & h4{
+        padding-bottom: 20px;
+        font-family: variables.$first-font;
+        font-weight: 400;
+    }
+
+    & .btn-resquet{
+        width: 218px;
+        height: 56px;
+    }
+}

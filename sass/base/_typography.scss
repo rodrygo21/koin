@@ -1,0 +1,6 @@
+@use "../abstract/variables";
+
+html,
+body {
+font-family: variables.$first-font, variables.$second-font;
+}
